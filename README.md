@@ -26,12 +26,14 @@ Ablauf bei Interaktion mit der Maus:
 - Benutzer bewegt die Maus über ein Element auf dem Ribbon
 - Der Tooltip zu diesem Element wird geöffnet. Dadurch wird abgefragt, welches Element sich gerade unter der Maus befindet.
 - Beim Klick auf den Tooltip wird abgefragt, ob es sich um einen Tooltip handelt und der Pfad des Elements wird zurück gegeben.
+- RibbonHelpTooltip_Click wird aufgerufen. (HIER DANN WEITERFÜHRENDEN CODE REIN)
 
 
 Ablauf bei Drücken von F1:
 
 - Die Maus muss sich über einem Element auf dem Ribbon befinden.
 - Beim Drücken von F1 wird der Pfad dieses Elements abgefragt und zurück gegeben.
+- RibbonHelpTooltip_F1 wird aufgerufen. (HIER DANN WEITERFÜHRENDEN CODE REIN)
 
 
 Probleme:
