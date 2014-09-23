@@ -8,9 +8,11 @@ Mit dieser Information kann dann jeder weiter verfahren, wie er lustig ist. Zum 
 WICHTIG:
 1) DAS VBA CODE FENSTER NICHT (!!) ÖFFNEN, WÄHREND DIE EVENT HOOKS LAUFEN! DAS GIBT UNSCHÖNES GEFLACKER UND ACCESS MUSS NEU GESTARTET WERDEN! WENN IHR ETWAS AM CODE ÄNDERN WOLLT, DIE DATENBANK IMMER MIT SHIFT TASTE GEDRÜCKT STARTEN!
 
-2) ES WIRD MIT WIN32 CALLBACKS GEARBEITET. HIER AUF JEDEN FALL DAS "ON ERROR RESUME NEXT" BENUTZEN!
+2) KOMPRIMIEREN UND REPARIEREN *NUR* MIT GEDRÜCKTER SHIFT-TASTE DURCHFÜHREN. SONST STÜRZT ACCESS AB!
 
-3) Es sind so wenige Event Hooks eingerichtet wie möglich. Das Event EVENT\_OBJECT_HIDE wird Access beim Beenden zum Beispiel definitiv abstürzen lassen. Also seid vorsichtig, was ihr alles abfragt.
+3) ES WIRD MIT WIN32 CALLBACKS GEARBEITET. HIER AUF JEDEN FALL DAS "ON ERROR RESUME NEXT" BENUTZEN!
+
+4) Es sind so wenige Event Hooks eingerichtet wie möglich. Das Event EVENT\_OBJECT_HIDE wird Access beim Beenden zum Beispiel definitiv abstürzen lassen. Also seid vorsichtig, was ihr alles abfragt.
 
 
 Aufbau der ACCDB:
