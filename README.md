@@ -32,3 +32,8 @@ Ablauf bei Drücken von F1:
 
 - Die Maus muss sich über einem Element auf dem Ribbon befinden.
 - Beim Drücken von F1 wird der Pfad dieses Elements abgefragt und zurück gegeben.
+
+
+Probleme:
+
+- Das Entfernen der Event Hooks funktioniert aus unerfindlichen Gründen nicht. Deswegen kann das Event EVENT\_OBJECT_HIDE nicht benutzt werden, das gebraucht wird, damit die Funktionsweise der F1 Taste so ist wie im Original. Wenn hier jemand eine Lösung hat, kann er mir diese gerne zukommen lassen.
