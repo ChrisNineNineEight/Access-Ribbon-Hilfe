@@ -7,8 +7,11 @@ Mit dieser Information kann dann jeder weiter verfahren, wie er lustig ist. Zum 
 
 WICHTIG:
 1) DAS VBA CODE FENSTER NICHT (!!) ÖFFNEN, WÄHREND DIE EVENT HOOKS LAUFEN! DAS GIBT UNSCHÖNES GEFLACKER UND ACCESS MUSS NEU GESTARTET WERDEN!
+
 2) ES WIRD MIT WIN32 CALLBACKS GEARBEITET. HIER AUF JEDEN FALL DAS "ON ERROR RESUME NEXT" BENUTZEN!
+
 3) Es sind so wenige Event Hooks eingerichtet wie möglich. Das Event EVENT\_OBJECT_HIDE wird Access beim Beenden zum Beispiel definitiv abstürzen lassen. Also seid vorsichtig, was ihr alles abfragt.
+
 
 Aufbau der ACCDB:
 
@@ -17,11 +20,13 @@ Aufbau der ACCDB:
 - modAutoExec  zum Starten der Event Hooks (wird vom AutoExec Makro aufgerufen)
 - modRibbonHelp, das den auskommentierten Code enthält
 
+
 Ablauf bei Interaktion mit der Maus:
 
 - Benutzer bewegt die Maus über ein Element auf dem Ribbon
 - Der Tooltip zu diesem Element wird geöffnet. Dadurch wird abgefragt, welches Element sich gerade unter der Maus befindet.
 - Beim Klick auf den Tooltip wird abgefragt, ob es sich um einen Tooltip handelt und der Pfad des Elements wird zurück gegeben.
+
 
 Ablauf bei Drücken von F1:
 
