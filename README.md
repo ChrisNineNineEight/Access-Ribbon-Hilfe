@@ -48,5 +48,4 @@ Klicks auf die "Hilfe" Buttons auf Front- und Backstage: (Fragezeichen oben rech
 
 Probleme:
 
-- Das Entfernen der Event Hooks funktioniert aus unerfindlichen Gründen nicht. Deswegen kann das Event EVENT\_OBJECT_HIDE nicht benutzt werden, das gebraucht wird, damit die Funktionsweise der F1 Taste so ist wie im Original. Wenn hier jemand eine Lösung hat, kann er mir diese gerne zukommen lassen.
-- Schließen des Programms, während man in der Backstage ist, lässt das Programm abstürzen. Wenn man nicht in der Backstage ist, beendet das Programm aber ganz normal.
+- Das Entfernen der Event Hooks funktioniert aus unerfindlichen Gründen nicht. Deswegen kann das Event EVENT\_OBJECT_HIDE nicht benutzt werden, damit man mit bekommt, wenn ein Tooltip wieder verschwindet. Wenn hier jemand eine Lösung hat, kann er mir diese gerne zukommen lassen.
