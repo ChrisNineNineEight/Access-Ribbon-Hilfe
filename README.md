@@ -1,4 +1,4 @@
-Access-Ribbon-Hilfe
+﻿Access-Ribbon-Hilfe
 ===================
 
 Wenn man auf den Supertip eines Elementes eines Access Ribbons klickt oder auf "Weitere Infos" klickt, öffnet sich standardmäßig die Access Hilfe mit einem nichtssagenden Text.
@@ -14,13 +14,16 @@ WICHTIG:
 
 4) Es sind so wenige Event Hooks eingerichtet wie möglich. Das Event EVENT\_OBJECT_HIDE wird Access beim Beenden zum Beispiel definitiv abstürzen lassen. Also seid vorsichtig, was ihr alles abfragt.
 
+5) Dieses Beispiel wurde in Access 2013 erstellt. Das Abfangen des Hilfe Buttons auf der Backstage in Access 2010 funktioniert mit diesem Beispiel nicht. Da ich kein Access 2010 besitze, kann ich dieses Problem jedoch nicht beheben.
+
 
 Aufbau der ACCDB:
 
 - AutoExec Makro zum Starten der Event Hooks
 - AutoKeys Makro, um das Drücken auf F1 abzufangen, wenn die Maus sich über einem Ribbon Element befindet
 - modAutoExec  zum Starten der Event Hooks (wird vom AutoExec Makro aufgerufen)
-- modRibbonHelp, das den auskommentierten Code enthält
+- modRibbonHelp, das den kommentierten Code enthält
+- CloseForm Formular, das genutzt wird, damit man auch auf der Backstage "Beenden" und "Schließen" benutzen kann. Direktes Schließen lässt Access abstürzen.
 
 
 Ablauf bei Interaktion mit der Maus:
@@ -33,9 +36,14 @@ Ablauf bei Interaktion mit der Maus:
 
 Ablauf bei Drücken von F1:
 
-- Die Maus muss sich über einem Element auf dem Ribbon befinden.
+- Die Maus muss sich über einem Element auf dem Ribbon oder dessen Tooltip befinden.
 - Beim Drücken von F1 wird der Pfad dieses Elements abgefragt und zurück gegeben.
 - RibbonHelpTooltip_F1 wird aufgerufen. (HIER DANN WEITERFÜHRENDEN CODE REIN)
+
+Klicks auf die "Hilfe" Buttons auf Front- und Backstage: (Fragezeichen oben rechts neben dem "Minimieren" Button)
+
+- Der Button auf der Frontstage wird ganz normal über einen Callback im Ribbon XML abgefangen: <command idMso="Help" onAction="OnActionHelpButton"/>
+- Der Button auf der Backstage wird so abgefangen wie auch die Tooltips der Ribbon Elemente
 
 
 Probleme:
